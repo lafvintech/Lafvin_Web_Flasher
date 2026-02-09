@@ -1,0 +1,14 @@
+{
+  "version": "05",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "05_GIF_Player.ino.bootloader.bin", "offset": 0 },
+        { "path": "05_GIF_Player.ino.partitions.bin", "offset": 32768 },
+        { "path": "05_GIF_Player.ino.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}

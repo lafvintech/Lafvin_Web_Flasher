@@ -1,0 +1,14 @@
+{
+  "version": "02",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "02_bootloader.bin", "offset": 0 },
+        { "path": "02_partitions.bin", "offset": 32768 },
+        { "path": "02_app.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "retro-go.img",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}

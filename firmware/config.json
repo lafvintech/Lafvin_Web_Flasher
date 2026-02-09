@@ -1,0 +1,93 @@
+{
+  "devices": [
+    {
+      "id": "LB008",
+      "name": "LB008",
+      "image": "firmware/LB008/LB008.jpg",
+      "firmwares": [
+        {
+          "id": "LVGL_3In1",
+          "name": "LVGL_3In1",
+          "versions": [
+            {
+              "id": "v1.0",
+              "name": "v1.0",
+              "manifest_path": "firmware/LB008/LVGL/LVGL.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LA070",
+      "name": "LA070",
+      "image": "firmware/LA070/LA070.png",
+      "firmwares": [
+        {
+          "id": "RetroGame",
+          "name": "RetroGame",
+          "versions": [
+            {
+              "id": "v1.0",
+              "name": "v1.0",
+              "manifest_path": "firmware/LA070/RetroGame/1.0.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LA072",
+      "name": "LA072",
+      "image": "firmware/LA072/LA072.jpg",
+      "firmwares": [
+        {
+          "id": "LVGL",
+          "name": "LVGL",
+          "versions": [
+            {
+              "id": "01_HelloWorld11",
+              "name": "01_HelloWorld11",
+              "manifest_path": "firmware/LA072/LVGL/01/01.json"
+            },
+			      {
+              "id": "02_Matrix",
+              "name": "02_Matrix",
+              "manifest_path": "firmware/LA072/LVGL/02/02.json"
+            },
+            {
+              "id": "03_SimpleWatch",
+              "name": "03_SimpleWatch",
+              "manifest_path": "firmware/LA072/LVGL/03/03.json"
+            },
+            {
+              "id": "04_GFX_WIFIAnalyzer",
+              "name": "04_GFX_WIFIAnalyzer",
+              "manifest_path": "firmware/LA072/LVGL/04/04.json"
+            },
+            {
+              "id": "05_GIF_Player",
+              "name": "05_GIF_Player",
+              "manifest_path": "firmware/LA072/LVGL/05/05.json"
+            },
+			      {
+              "id": "06_LVGL_Time",
+              "name": "06_LVGL_Time",
+              "manifest_path": "firmware/LA072/LVGL/06/06.json"
+            },
+            {
+              "id": "07_LVGL_LED",
+              "name": "07_LVGL_LED",
+              "manifest_path": "firmware/LA072/LVGL/07/07.json"
+            },
+            {
+              "id": "08_WiFi_ImageViewer",
+              "name": "08_WiFi_ImageViewer",
+              "manifest_path": "firmware/LA072/LVGL/08/08.json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "06",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "06_LVGL_Time.ino.bootloader.bin", "offset": 0 },
+        { "path": "06_LVGL_Time.ino.partitions.bin", "offset": 32768 },
+        { "path": "06_LVGL_Time.ino.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "04",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "04_GFX_WIFIAnalyzer.ino.bootloader.bin", "offset": 0 },
+        { "path": "04_GFX_WIFIAnalyzer.ino.partitions.bin", "offset": 32768 },
+        { "path": "04_GFX_WIFIAnalyzer.ino.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}
