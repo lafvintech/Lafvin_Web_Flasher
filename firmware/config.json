@@ -86,6 +86,17 @@
               "manifest_path": "firmware/LA072/LVGL/08/08.json"
             }
           ]
+        },
+        {
+          "id": "Xiaozhi-Cam",
+          "name": "Xiaozhi-Cam",
+          "versions": [
+            {
+              "id": "Xiaozhi-Cam",
+              "name": "Xiaozhi-Cam",
+              "manifest_path": "firmware/LA072/Xiaozhi-Cam/01/Xiaozhi-Cam-01.json"
+            }
+          ]
         }
       ]
     }
