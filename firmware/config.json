@@ -38,7 +38,7 @@
     },
     {
       "id": "LA066",
-      "name": "LA066",
+      "name": "LAFVIN AIoT Starter Kit",
       "image": "firmware/LA066/LA066.jpg",
       "firmwares": [
         {
@@ -46,8 +46,8 @@
           "name": "Xiaozhi-Aiot",
           "versions": [
             {
-              "id": "xiaozhi-Aiot",
-              "name": "xiaozhi-Aiot",
+              "id": "Xiaozhi-Aiot",
+              "name": "Xiaozhi-Aiot",
               "manifest_path": "firmware/LA066/xiaozhi_iot/1.0.json"
             }
           ]
