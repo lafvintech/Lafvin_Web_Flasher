@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderDeviceCarousel() {
         if (!appConfig?.devices) return;
         deviceList.innerHTML = '';
-        appConfig.devices.forEach(device => {
+        appConfig.devices.filter(d => !d.hidden).forEach(device => {
             const item = document.createElement('div');
             item.className = 'device-item';
             item.innerHTML = `

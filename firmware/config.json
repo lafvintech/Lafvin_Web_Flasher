@@ -57,6 +57,7 @@
     {
       "id": "LA072",
       "name": "LA072",
+      "hidden": true,
       "image": "firmware/LA072/LA072.jpg",
       "firmwares": [
         {
