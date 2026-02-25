@@ -37,6 +37,24 @@
       ]
     },
     {
+      "id": "LA066",
+      "name": "LA066",
+      "image": "firmware/LA066/LA066.jpg",
+      "firmwares": [
+        {
+          "id": "Xiaozhi-Aiot",
+          "name": "Xiaozhi-Aiot",
+          "versions": [
+            {
+              "id": "xiaozhi-Aiot",
+              "name": "xiaozhi-Aiot",
+              "manifest_path": "firmware/LA066/xiaozhi_iot/1.0.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "LA072",
       "name": "LA072",
       "image": "firmware/LA072/LA072.jpg",
