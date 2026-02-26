@@ -1,0 +1,12 @@
+{
+  "version": "01",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "esp32s3-1.69-cam.bin", "offset": 0 }
+      ]
+    }
+  ]
+}

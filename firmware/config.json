@@ -19,18 +19,18 @@
       ]
     },
     {
-      "id": "LA070",
-      "name": "LA070",
-      "image": "firmware/LA070/LA070.png",
+      "id": "LA064",
+      "name": "LAFVIN ESP32S3 AI Chatbot Kit",
+      "image": "firmware/LA064/LA064.jpg",
       "firmwares": [
         {
-          "id": "RetroGame",
-          "name": "RetroGame",
+          "id": "Xiaozhi-esp32",
+          "name": "Xiaozhi-esp32",
           "versions": [
             {
-              "id": "v1.0",
-              "name": "v1.0",
-              "manifest_path": "firmware/LA070/RetroGame/1.0.json"
+              "id": "Xiaozhi-esp32",
+              "name": "Xiaozhi-esp32",
+              "manifest_path": "firmware/LA064/xiaozhi_esp32/1.0.json"
             }
           ]
         }
@@ -55,9 +55,28 @@
       ]
     },
     {
+      "id": "LA070",
+      "name": "LA070",
+      "image": "firmware/LA070/LA070.png",
+      "firmwares": [
+        {
+          "id": "RetroGame",
+          "name": "RetroGame",
+          "versions": [
+            {
+              "id": "v1.0",
+              "name": "v1.0",
+              "manifest_path": "firmware/LA070/RetroGame/1.0.json"
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
       "id": "LA072",
       "name": "LA072",
-      "hidden": true,
+      "hidden": false,
       "image": "firmware/LA072/LA072.jpg",
       "firmwares": [
         {
@@ -114,6 +133,17 @@
               "id": "Xiaozhi-Cam",
               "name": "Xiaozhi-Cam",
               "manifest_path": "firmware/LA072/Xiaozhi-Cam/01/Xiaozhi-Cam-01.json"
+            }
+          ]
+        },
+        {
+          "id": "UVC-Cam",
+          "name": "UVC-Cam",
+          "versions": [
+            {
+              "id": "UVC-Cam",
+              "name": "UVC-Cam",
+              "manifest_path": "firmware/LA072/UVC-Cam/UVC-Cam-01.json"
             }
           ]
         }
