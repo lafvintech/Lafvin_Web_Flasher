@@ -84,8 +84,8 @@
           "name": "LVGL",
           "versions": [
             {
-              "id": "01_HelloWorld11",
-              "name": "01_HelloWorld11",
+              "id": "01_HelloWorld",
+              "name": "01_HelloWorld",
               "manifest_path": "firmware/LA072/LVGL/01/01.json"
             },
 			      {
@@ -137,13 +137,28 @@
           ]
         },
         {
-          "id": "UVC-Cam",
-          "name": "UVC-Cam",
+          "id": "IDF",
+          "name": "IDF",
           "versions": [
+            {
+              "id": "helloworld",
+              "name": "helloworld",
+              "manifest_path": "firmware/LA072/IDF/hello_world/hello_world.json"
+            },
+			      {
+              "id": "blink",
+              "name": "blink",
+              "manifest_path": "firmware/LA072/IDF/blink/blink.json"
+            },
+            {
+              "id": "i2s_audio",
+              "name": "i2s_audio",
+              "manifest_path": "firmware/LA072/IDF/i2s_audio/i2s_audio.json"
+            },
             {
               "id": "UVC-Cam",
               "name": "UVC-Cam",
-              "manifest_path": "firmware/LA072/UVC-Cam/UVC-Cam-01.json"
+              "manifest_path": "firmware/LA072/IDF/UVC-Cam/UVC-Cam.json"
             }
           ]
         }
