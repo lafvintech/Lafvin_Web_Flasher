@@ -817,3 +817,39 @@ body.light-mode .info-trigger-btn {
     visibility: visible;
     transform: scale(1); /* 恢复原大小 */
 }
+/* Header logo + support modal overrides */
+.logo-image {
+    height: 36px;
+    width: auto;
+    display: block;
+}
+
+.logo-text {
+    color: var(--primary-text-color);
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.nav-link-btn {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.support-modal-content {
+    max-width: 520px;
+}
+
+.support-modal-main {
+    padding: 2rem;
+    justify-content: flex-start;
+}
+
+.support-modal-main p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--primary-text-color);
+}

@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const flashBtn = document.getElementById('flash-btn');
     const toggleConsoleBtn = document.getElementById('toggle-console-btn');
     const serialPortInfoBtn = document.getElementById('serial-port-info-btn');
+    const supportBtn = document.getElementById('support-btn');
     const themeSwitcher = document.getElementById('theme-switcher');
     const baudRateSelect = document.getElementById('baud-rate-select');
     const terminalSection = document.querySelector('.terminal-section');
@@ -29,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightArrow = document.querySelector('.right-arrow');
     const serialInfoModal = document.getElementById('serial-info-modal');
     const closeSerialInfoModalBtn = document.getElementById('close-serial-info-modal-btn');
+    const supportModal = document.getElementById('support-modal');
+    const closeSupportModalBtn = document.getElementById('close-support-modal-btn');
     const modalBaudRateSelect = document.getElementById('modal-baud-rate-select');
     const clearTerminalBtn = document.getElementById('clear-terminal-btn');
     const serialSendInput = document.getElementById('serial-send-input');
@@ -142,6 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeSerialInfoModalBtn.addEventListener('click', () => toggleModal(serialInfoModal));
     serialInfoModal.addEventListener('click', (e) => { if (e.target === serialInfoModal) toggleModal(serialInfoModal); });
+    supportBtn.addEventListener('click', () => toggleModal(supportModal));
+    closeSupportModalBtn.addEventListener('click', () => toggleModal(supportModal));
+    supportModal.addEventListener('click', (e) => { if (e.target === supportModal) toggleModal(supportModal); });
 
     themeSwitcher.addEventListener('click', () => {
         setTheme(body.classList.contains('light-mode') ? 'dark' : 'light');

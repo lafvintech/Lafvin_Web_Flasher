@@ -16,13 +16,13 @@
     <!-- 头部 -->
     <header>
         <div class="logo">
-            <i class="fas fa-microchip logo-icon"></i>
-            <span>LAFVIN</span>
+            <img src="resource/LOGO_LIGHT.png" alt="LAFVIN Logo" class="logo-image">
+            <span class="logo-text">LAFVIN</span>
         </div>
         <div class="header-right">
             <nav>
                 <a href="#" class="nav-button">Home</a>
-                <a href="#" class="nav-button">Support</a>
+                <button id="support-btn" class="nav-button nav-link-btn" type="button">Support</button>
             </nav>
             <div id="theme-switcher" class="theme-switcher">
                 <i class="fas fa-moon"></i>
@@ -148,6 +148,19 @@
                         <button id="serial-send-btn" class="action-btn small-btn">Send</button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support 模态框 -->
+    <div id="support-modal" class="modal-overlay">
+        <div class="modal-content support-modal-content">
+            <div class="modal-header">
+                <h2>Support</h2>
+                <button id="close-support-modal-btn" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-main support-modal-main">
+                <p>Support Email: tech_edu_service@outlook.com</p>
             </div>
         </div>
     </div>
