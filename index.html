@@ -33,42 +33,54 @@
     <!-- 主内容 -->
     <main>
         <section class="hero">
-            <h1 class="main-title">Flash directly from the web</h1>
-            <p class="subtitle">Connect your device, select your model and board version, and start flashing immediately. No setup required.</p>
+            <div class="hero-badge">LAFVIN ESP Web Tool</div>
+            <h1 class="main-title">Web Flasher</h1>
+            <p class="subtitle">Connect your board, select firmware, and flash directly from your browser.</p>
         </section>
 
-        <!-- 三步选择器 -->
-        <section class="stepper">
-            <div id="step-1" class="step active">
-                <div class="step-icon"><i class="fas fa-desktop"></i></div>
-                <div id="select-device-btn" class="step-content step-button">
-                    <span>Select device</span>
-                </div>
+        <section class="workflow-shell">
+            <div class="section-title-wrap">
+                <h2 class="section-title">Flash Pipeline</h2>
+                <p class="section-subtitle">Three selections before writing firmware</p>
             </div>
-            <div id="step-2" class="step">
-                <div class="step-icon"><i class="fas fa-microchip"></i></div>
-                <div class="step-content">
-                    <div class="dropdown-container">
-                        <select id="firmware-select" disabled>
-                            <option value="">Select firmware</option>
-                        </select>
+
+            <!-- 三步选择器 -->
+            <section class="stepper">
+                <div id="step-1" class="step active">
+                    <div class="step-icon"><i class="fas fa-desktop"></i></div>
+                    <div id="select-device-btn" class="step-content step-button">
+                        <span>Select device</span>
                     </div>
                 </div>
-            </div>
-            <div id="step-3" class="step">
-                <div class="step-icon"><i class="fas fa-code-branch"></i></div>
-                <div class="step-content">
-                    <div class="dropdown-container">
-                        <select id="version-select" disabled>
-                            <option value="">Select version</option>
-                        </select>
+                <div id="step-2" class="step">
+                    <div class="step-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="step-content">
+                        <div class="dropdown-container">
+                            <select id="firmware-select" disabled>
+                                <option value="">Select firmware</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div id="step-3" class="step">
+                    <div class="step-icon"><i class="fas fa-code-branch"></i></div>
+                    <div class="step-content">
+                        <div class="dropdown-container">
+                            <select id="version-select" disabled>
+                                <option value="">Select version</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <!-- 操作区 -->
         <section class="actions">
+            <div class="section-title-wrap">
+                <h2 class="section-title">Device Actions</h2>
+                <p class="section-subtitle">Connect, flash, and inspect serial output</p>
+            </div>
             <div class="controls-grid">
                 <div class="baud-rate-selector">
                     <label for="baud-rate-select">Flash Baud Rate:</label>
