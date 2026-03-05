@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "SmartFarm.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
