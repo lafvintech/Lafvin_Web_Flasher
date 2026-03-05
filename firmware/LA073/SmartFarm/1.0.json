@@ -6,7 +6,7 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "LA073.bin",
+          "path": "SmartFarm.bin",
           "offset": 0
         }
       ]

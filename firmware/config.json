@@ -72,7 +72,24 @@
         }
       ]
     },
-    
+    {
+      "id": "LA073",
+      "name": "ESP32 SmartFarm IOT Kit",
+      "image": "firmware/LA073/LA073.jpg",
+      "firmwares": [
+        {
+          "id": "SmartFarm",
+          "name": "SmartFarm",
+          "versions": [
+            {
+              "id": "SmartFarm",
+              "name": "SmartFarm",
+              "manifest_path": "firmware/LA073/SmartFarm/1.0.json"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "LA072",
       "name": "LA072",
