@@ -72,8 +72,7 @@
         }
       ]
     },
-    
-        {
+    {
       "id": "LA073",
       "name": "ESP32 SmartFarm IOT Kit",
       "image": "firmware/LA073/LA073.jpg",
@@ -91,7 +90,6 @@
         }
       ]
     },
-
     {
       "id": "LA072",
       "name": "LA072",
