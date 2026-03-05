@@ -72,7 +72,25 @@
         }
       ]
     },
-    
+    {
+      "id": "LA073",
+      "name": "LA073",
+      "image": "firmware/LA073/LA073.png",
+      "firmwares": [
+        {
+          "id": "SmartFarm",
+          "name": "SmartFarm",
+          "versions": [
+            {
+              "id": "v1.0",
+              "name": "v1.0",
+              "manifest_path": "firmware/LA073/SmartFarm/1.0.json"
+            }
+          ]
+        }
+      ]
+    },
+
     {
       "id": "LA072",
       "name": "LA072",
