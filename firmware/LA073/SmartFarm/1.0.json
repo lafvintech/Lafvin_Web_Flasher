@@ -3,7 +3,7 @@
   "new_install_prompt_erase": true,
   "builds": [
     {
-      "chipFamily": "ESP32-S3",
+      "chipFamily": "ESP32",
       "parts": [
         {
           "path": "LA073.bin",
