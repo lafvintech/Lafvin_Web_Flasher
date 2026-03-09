@@ -71,6 +71,12 @@
                             </select>
                         </div>
                     </div>
+                    <div id="version-notes-wrapper" class="version-notes-wrapper version-notes-top is-hidden">
+                        <button id="version-notes-btn" class="version-notes-btn" type="button" aria-label="Version notes">
+                            <i class="fas fa-question"></i>
+                        </button>
+                        <div id="version-notes-tooltip" class="version-notes-tooltip">No notes</div>
+                    </div>
                 </div>
             </section>
         </section>
@@ -173,6 +179,19 @@
             </div>
             <div class="modal-main support-modal-main">
                 <p>Support Email: tech_edu_service@outlook.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Version Notes 模态框 -->
+    <div id="version-notes-modal" class="modal-overlay">
+        <div class="modal-content version-notes-modal-content">
+            <div class="modal-header">
+                <h2>Version Notes</h2>
+                <button id="close-version-notes-modal-btn" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-main">
+                <pre id="version-notes-content" class="version-notes-content"></pre>
             </div>
         </div>
     </div>
