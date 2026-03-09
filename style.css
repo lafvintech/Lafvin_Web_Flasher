@@ -167,6 +167,7 @@ nav {
     align-items: center; /* 子元素水平居中 */
     gap: 1.5rem; /* 子元素间距 */
     transition: all 0.4s ease; /* 所有属性过渡动画 */
+    position: relative;
 }
 
 .step:not(.active) {
@@ -1491,3 +1492,96 @@ select:not(:disabled) {
 }
 
 .controls-grid .baud-rate-selecto
+
+/* Version notes UI */
+.version-notes-wrapper {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+
+.version-notes-wrapper.is-hidden {
+    display: none;
+}
+
+.version-notes-wrapper.version-notes-top {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.version-notes-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--surface-color);
+    color: var(--primary-text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.version-notes-btn:hover {
+    transform: translateY(-1px);
+    border-color: var(--primary-accent-color);
+}
+
+.version-notes-tooltip {
+    position: absolute;
+    top: 50%;
+    left: 36px;
+    transform: translateY(-50%) translateX(-6px);
+    min-width: 220px;
+    max-width: 360px;
+    max-height: 220px;
+    overflow: auto;
+    padding: 0.7rem 0.9rem;
+    border-radius: 10px;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    color: var(--primary-text-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+    text-align: left;
+    white-space: pre-wrap;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.version-notes-wrapper:hover .version-notes-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+.version-notes-modal-content {
+    max-width: 720px;
+}
+
+.version-notes-content {
+    margin: 0;
+    padding: 0.5rem 0;
+    white-space: pre-wrap;
+    color: var(--primary-text-color);
+    text-align: left;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.version-notes-top .version-notes-tooltip {
+    left: auto;
+    right: 46px;
+    transform: translateY(-50%) translateX(6px);
+}
+
+.version-notes-top:hover .version-notes-tooltip {
+    transform: translateY(-50%) translateX(0);
+}

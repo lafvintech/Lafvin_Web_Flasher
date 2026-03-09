@@ -28,9 +28,15 @@
           "name": "Xiaozhi-esp32",
           "versions": [
             {
-              "id": "Xiaozhi-esp32",
-              "name": "Xiaozhi-esp32",
-              "manifest_path": "firmware/LA064/xiaozhi_esp32/1.0.json"
+              "id": "1.6.0",
+              "name": "1.6.0",
+              "manifest_path": "firmware/LA064/xiaozhi_esp32/1.6.0/1.6.0.json"
+            },
+            {
+              "id": "1.7.5",
+              "name": "1.7.5",
+              "manifest_path": "firmware/LA064/xiaozhi_esp32/1.7.5/1.7.5.json",
+              "notes_path": "firmware/LA064/xiaozhi_esp32/1.7.5/version.txt"
             }
           ]
         }

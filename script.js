@@ -38,6 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const serialSendBtn = document.getElementById('serial-send-btn');
     const step2 = document.getElementById('step-2');
     const step3 = document.getElementById('step-3');
+    const versionNotesWrapper = document.getElementById('version-notes-wrapper');
+    const versionNotesBtn = document.getElementById('version-notes-btn');
+    const versionNotesTooltip = document.getElementById('version-notes-tooltip');
+    const versionNotesModal = document.getElementById('version-notes-modal');
+    const closeVersionNotesModalBtn = document.getElementById('close-version-notes-modal-btn');
+    const versionNotesContent = document.getElementById('version-notes-content');
 
     // --- 状态 ---
     let appConfig = null;
@@ -45,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedFirmware = null;
     let selectedVersion = null;
     let isConnected = false;
+    let versionNotesText = '';
 
     // 挂载串口监视器终端
     const serialMonitorTerminalElement = document.getElementById('serial-monitor-terminal');
@@ -73,6 +80,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 设备轮播渲染 ---
+
+    function resetVersionNotes() {
+        versionNotesText = '';
+        versionNotesTooltip.textContent = 'No notes';
+        versionNotesContent.textContent = '';
+        versionNotesWrapper.classList.add('is-hidden');
+    }
+
+    async function loadVersionNotes(version) {
+        resetVersionNotes();
+        if (!version?.notes_path) return;
+        try {
+            const response = await fetch(version.notes_path);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const text = await response.text();
+            versionNotesText = (text || '').trim() || 'No notes available.';
+        } catch (error) {
+            versionNotesText = 'Notes file not found.';
+        }
+        versionNotesTooltip.textContent = versionNotesText;
+        versionNotesContent.textContent = versionNotesText;
+        versionNotesWrapper.classList.remove('is-hidden');
+    }
+
+    // --- Device carousel ---
     function renderDeviceCarousel() {
         if (!appConfig?.devices) return;
         deviceList.innerHTML = '';
@@ -95,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedDevice = device;
         selectedFirmware = null;
         selectedVersion = null;
+        resetVersionNotes();
         selectDeviceBtn.innerHTML = `<span>${device.name}</span>`;
         selectDeviceBtn.classList.add('selected');
 
@@ -148,6 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
     supportBtn.addEventListener('click', () => toggleModal(supportModal));
     closeSupportModalBtn.addEventListener('click', () => toggleModal(supportModal));
     supportModal.addEventListener('click', (e) => { if (e.target === supportModal) toggleModal(supportModal); });
+    closeVersionNotesModalBtn.addEventListener('click', () => toggleModal(versionNotesModal));
+    versionNotesModal.addEventListener('click', (e) => { if (e.target === versionNotesModal) toggleModal(versionNotesModal); });
 
     themeSwitcher.addEventListener('click', () => {
         setTheme(body.classList.contains('light-mode') ? 'dark' : 'light');
@@ -159,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     firmwareSelect.addEventListener('change', () => {
         selectedFirmware = selectedDevice?.firmwares.find(f => f.id === firmwareSelect.value) || null;
         selectedVersion = null;
+        resetVersionNotes();
         if (selectedFirmware?.versions?.length) {
             populateDropdown(versionSelect, selectedFirmware.versions, 'Select version');
             versionSelect.disabled = false;
@@ -173,7 +209,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     versionSelect.addEventListener('change', () => {
         selectedVersion = selectedFirmware?.versions.find(v => v.id === versionSelect.value) || null;
+        loadVersionNotes(selectedVersion);
         updateButtonStates();
+    });
+
+    versionNotesBtn.addEventListener('click', () => {
+        if (versionNotesWrapper.classList.contains('is-hidden')) return;
+        toggleModal(versionNotesModal);
     });
 
     // 连接/断开
