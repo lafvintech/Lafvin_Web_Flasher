@@ -1,0 +1,3 @@
+Updated to the latest version 2.2.4
+Improved interruption efficiency and wake-up accuracy, and fixed wake-up word recognition bug
+唤醒词是:"Hi,E-S-P" and "Sophia"

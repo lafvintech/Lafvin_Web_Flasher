@@ -1,2 +1,2 @@
-这个版本是更改唤醒词并提高版本为1.7.5
-唤醒词为sophia和alexa
+This version is to change the wake word and improve the version to 1.7.5
+The wake words are sophia and alexa
