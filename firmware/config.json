@@ -45,6 +45,17 @@
               "notes_path": "firmware/LA064/xiaozhi_esp32/2.2.4/version.txt"
             }
           ]
+        },
+        {
+          "id": "ChatGPT",
+          "name": "ChatGPT",
+          "versions": [
+            {
+              "id": "1.0.0",
+              "name": "1.0.0",
+              "manifest_path": "firmware/LA064/ChatGPT/1.0.0/1.0.0.json"
+            }
+          ]
         }
       ]
     },
