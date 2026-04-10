@@ -342,17 +342,74 @@ body.light-mode select:not(:disabled) {
 }
 .modal-nav-arrow:hover { color: var(--primary-text-color); transform: scale(1.2); } /* 悬停效果 */
 
-.device-carousel { flex-grow: 1; overflow: hidden; } /* 设备轮播区域，占据可用空间并隐藏溢出 */
+.device-modal-main {
+    align-items: stretch;
+    padding: 0 2rem 2rem;
+}
+
+.device-carousel {
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden;
+} /* 设备选择区域，占据可用空间并隐藏溢出 */
 
 .device-list {
-    display: flex; gap: 3rem; padding: 2rem; /* Flex布局，子元素间距，内边距 */
-    overflow-x: auto; scroll-behavior: smooth; /* 允许水平滚动，平滑滚动 */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0 0;
+    overflow-y: auto;
+    scroll-behavior: smooth;
     scrollbar-width: none; -ms-overflow-style: none; /* 隐藏滚动条 (Firefox, IE) */
 }
 .device-list::-webkit-scrollbar { display: none; } /* 隐藏滚动条 (Webkit) */
 
+.device-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.device-group-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+
+.device-group-track {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.device-group-scroll {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.device-group-items {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.device-group-items::-webkit-scrollbar { display: none; }
+
+.device-group-arrow {
+    flex: 0 0 auto;
+    padding: 0 0.75rem;
+}
+
 .device-item {
     display: flex; flex-direction: column; align-items: center; /* Flex布局，垂直排列，水平居中 */
+    flex: 0 0 170px;
     gap: 1.5rem; cursor: pointer; transition: transform 0.3s ease; /* 子元素间距，鼠标指针，形变过渡 */
 }
 .device-item:hover { transform: scale(1.05); } /* 悬停放大效果 */
@@ -589,6 +646,27 @@ footer {
     .controls-grid .baud-rate-selector,
     .controls-grid .erase-checkbox-container {
         justify-self: center; /* 波特率选择器和擦除复选框在小屏幕上居中 */
+    }
+
+    .device-modal-main {
+        padding: 0 1.25rem 1.5rem;
+    }
+
+    .device-group-items {
+        gap: 1rem;
+    }
+
+    .device-item {
+        flex-basis: 140px;
+    }
+
+    .device-group-track {
+        gap: 0.25rem;
+    }
+
+    .device-group-arrow {
+        padding: 0 0.35rem;
+        font-size: 1.5rem;
     }
 }
 

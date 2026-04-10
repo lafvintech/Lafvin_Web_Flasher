@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const deviceModal = document.getElementById('device-modal');
     const closeModalBtn = document.getElementById('close-modal-btn');
     const deviceList = document.getElementById('device-list');
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
     const serialInfoModal = document.getElementById('serial-info-modal');
     const closeSerialInfoModalBtn = document.getElementById('close-serial-info-modal-btn');
     const supportModal = document.getElementById('support-modal');
@@ -70,6 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function getDeviceSeries(device) {
+        if (device?.series) return String(device.series).toUpperCase();
+
+        const candidates = [device?.id, device?.name, device?.image].filter(Boolean);
+        for (const value of candidates) {
+            const match = String(value).match(/\b(LA|LB)\d*/i);
+            if (match) return match[1].toUpperCase();
+        }
+
+        return 'OTHER';
+    }
+
     function updateButtonStates() {
         const canFlash = selectedDevice && selectedFirmware && selectedVersion;
         connectBtn.innerHTML = isConnected
@@ -108,18 +118,79 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderDeviceCarousel() {
         if (!appConfig?.devices) return;
         deviceList.innerHTML = '';
-        appConfig.devices.filter(d => !d.hidden).forEach(device => {
-            const item = document.createElement('div');
-            item.className = 'device-item';
-            item.innerHTML = `
-                <div class="device-image-wrapper">
-                    <img src="${device.image || ''}" alt="${device.name}" class="device-image-placeholder"
-                         onerror="this.style.display='none'" />
-                </div>
-                <span class="device-name">${device.name}</span>
-            `;
-            item.addEventListener('click', () => handleDeviceSelection(device));
-            deviceList.appendChild(item);
+        const visibleDevices = appConfig.devices.filter(d => !d.hidden);
+        const groupedDevices = new Map([
+            ['LA', []],
+            ['LB', []],
+            ['OTHER', []]
+        ]);
+
+        visibleDevices.forEach(device => {
+            const series = getDeviceSeries(device);
+            if (!groupedDevices.has(series)) groupedDevices.set(series, []);
+            groupedDevices.get(series).push(device);
+        });
+
+        ['LA', 'LB', 'OTHER'].forEach(series => {
+            const devices = groupedDevices.get(series) || [];
+            if (!devices.length) return;
+
+            const section = document.createElement('section');
+            section.className = 'device-group';
+
+            const title = document.createElement('h3');
+            title.className = 'device-group-title';
+            title.textContent = series === 'OTHER' ? 'Other' : `${series} Series`;
+
+            const track = document.createElement('div');
+            track.className = 'device-group-track';
+
+            const leftArrow = document.createElement('button');
+            leftArrow.className = 'modal-nav-arrow device-group-arrow';
+            leftArrow.type = 'button';
+            leftArrow.setAttribute('aria-label', `${series} series scroll left`);
+            leftArrow.innerHTML = '<i class="fas fa-chevron-left"></i>';
+
+            const scrollArea = document.createElement('div');
+            scrollArea.className = 'device-group-scroll';
+
+            const items = document.createElement('div');
+            items.className = 'device-group-items';
+
+            devices.forEach(device => {
+                const item = document.createElement('div');
+                item.className = 'device-item';
+                item.innerHTML = `
+                    <div class="device-image-wrapper">
+                        <img src="${device.image || ''}" alt="${device.name}" class="device-image-placeholder"
+                             onerror="this.style.display='none'" />
+                    </div>
+                    <span class="device-name">${device.name}</span>
+                `;
+                item.addEventListener('click', () => handleDeviceSelection(device));
+                items.appendChild(item);
+            });
+
+            const rightArrow = document.createElement('button');
+            rightArrow.className = 'modal-nav-arrow device-group-arrow';
+            rightArrow.type = 'button';
+            rightArrow.setAttribute('aria-label', `${series} series scroll right`);
+            rightArrow.innerHTML = '<i class="fas fa-chevron-right"></i>';
+
+            leftArrow.addEventListener('click', () => {
+                items.scrollBy({ left: -360, behavior: 'smooth' });
+            });
+            rightArrow.addEventListener('click', () => {
+                items.scrollBy({ left: 360, behavior: 'smooth' });
+            });
+
+            scrollArea.appendChild(items);
+            track.appendChild(leftArrow);
+            track.appendChild(scrollArea);
+            track.appendChild(rightArrow);
+            section.appendChild(title);
+            section.appendChild(track);
+            deviceList.appendChild(section);
         });
     }
 
@@ -187,9 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
     themeSwitcher.addEventListener('click', () => {
         setTheme(body.classList.contains('light-mode') ? 'dark' : 'light');
     });
-
-    leftArrow.addEventListener('click', () => deviceList.scrollBy({ left: -300, behavior: 'smooth' }));
-    rightArrow.addEventListener('click', () => deviceList.scrollBy({ left: 300, behavior: 'smooth' }));
 
     firmwareSelect.addEventListener('change', () => {
         selectedFirmware = selectedDevice?.firmwares.find(f => f.id === firmwareSelect.value) || null;

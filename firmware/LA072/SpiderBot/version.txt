@@ -1,0 +1,1 @@
+Please use the baud rate of 115200 when burning SpiderBot and temporarily pull out the ultrasonic module, otherwise the burning may fail.

@@ -1,2 +1,3 @@
 This version is to change the wake word and improve the version to 1.7.5
 The wake words are sophia and alexa
+This version is a transitional version and will have some bugs
