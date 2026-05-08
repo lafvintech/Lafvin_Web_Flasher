@@ -133,6 +133,24 @@
       ]
     },
     {
+      "id": "LA075",
+      "name": "LAFVIN ESP32 S3 Multimedia Kit",
+      "image": "firmware/LA075/LA075.jpg",
+      "firmwares": [
+        {
+          "id": "ALL-IN-ONE",
+          "name": "ALL-IN-ONE",
+          "versions": [
+            {
+              "id": "ALL-IN-ONE",
+              "name": "ALL-IN-ONE",
+              "manifest_path": "firmware/LA075/LVGL/1.0.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "LB009",
       "name": "ESP32S3 1.69 LCD",
       "hidden": false,
