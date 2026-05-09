@@ -98,7 +98,7 @@
     {
       "id": "LA072",
       "name": "SpiderBot",
-      "image": "firmware/LA072/LA072.png",
+      "image": "firmware/LA072/LA072.jpg",
       "firmwares": [
         {
           "id": "SpiderBot",
@@ -127,6 +127,24 @@
               "id": "SmartFarm",
               "name": "SmartFarm",
               "manifest_path": "firmware/LA073/SmartFarm/1.0.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LA075",
+      "name": "LAFVIN ESP32 S3 Multimedia Kit",
+      "image": "firmware/LA075/LA075.png",
+      "firmwares": [
+        {
+          "id": "ALL-IN-ONE",
+          "name": "ALL-IN-ONE",
+          "versions": [
+            {
+              "id": "ALL-IN-ONE",
+              "name": "ALL-IN-ONE",
+              "manifest_path": "firmware/LA075/LAFVIN ESP32 S3 Multimedia Kit/1.0.json"
             }
           ]
         }
@@ -218,6 +236,36 @@
               "id": "UVC-Cam",
               "name": "UVC-Cam",
               "manifest_path": "firmware/LB009/IDF/UVC-Cam/UVC-Cam.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LB013",
+      "name": "ESP32S3 1.83 LCD",
+      "hidden": false,
+      "image": "firmware/LB013/LB013.png",
+      "firmwares": [
+        {
+          "id": "Arduino",
+          "name": "Arduino",
+          "versions": [
+            {
+              "id": "HMI Watch",
+              "name": "HMI Watch",
+              "manifest_path": "firmware/LB013/Arduino/1.0.json"
+            }
+          ]
+        },
+        {
+          "id": "Claw",
+          "name": "Claw",
+          "versions": [
+            {
+              "id": "V1.0.1",
+              "name": "V1.0.1",
+              "manifest_path": "firmware/LB013/Claw/1.0.json"
             }
           ]
         }

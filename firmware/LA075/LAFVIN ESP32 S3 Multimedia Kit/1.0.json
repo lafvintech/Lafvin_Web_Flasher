@@ -1,0 +1,14 @@
+{
+  "version": "01",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "15_LVGL_All_In_One.ino.bootloader.bin", "offset": 0 },
+        { "path": "15_LVGL_All_In_One.ino.partitions.bin", "offset": 32768 },
+        { "path": "15_LVGL_All_In_One.ino.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}
