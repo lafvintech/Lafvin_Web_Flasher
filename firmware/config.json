@@ -1,23 +1,9 @@
 {
   "devices": [
     {
-      "id": "LB008",
-      "name": "ESP32C6 1.47 LCD",
-      "image": "firmware/LB008/LB008.jpg",
-      "firmwares": [
-        {
-          "id": "LVGL_3In1",
-          "name": "LVGL_3In1",
-          "versions": [
-            {
-              "id": "v1.0",
-              "name": "v1.0",
-              "manifest_path": "firmware/LB008/LVGL/LVGL.json"
-            }
-          ]
-        }
-      ]
-    },
+      "_comment": "=============== LA系列 ===============",
+      "hidden": true
+    },   
     {
       "id": "LA064",
       "name": "ESP32S3 AI Chatbot Kit",
@@ -145,6 +131,28 @@
               "id": "ALL-IN-ONE",
               "name": "ALL-IN-ONE",
               "manifest_path": "firmware/LA075/LAFVIN ESP32 S3 Multimedia Kit/1.0.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_comment": "=============== LA系列 ===============",
+      "hidden": true
+    },   
+    {
+      "id": "LB008",
+      "name": "ESP32C6 1.47 LCD",
+      "image": "firmware/LB008/LB008.png",
+      "firmwares": [
+        {
+          "id": "LVGL_3In1",
+          "name": "LVGL_3In1",
+          "versions": [
+            {
+              "id": "v1.0",
+              "name": "v1.0",
+              "manifest_path": "firmware/LB008/LVGL/LVGL.json"
             }
           ]
         }
