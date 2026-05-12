@@ -154,7 +154,7 @@
       "id": "LB009",
       "name": "ESP32S3 1.69 LCD",
       "hidden": false,
-      "image": "firmware/LB009/LB009.jpg",
+      "image": "firmware/LB009/LB009.png",
       "firmwares": [
         {
           "id": "LVGL",
