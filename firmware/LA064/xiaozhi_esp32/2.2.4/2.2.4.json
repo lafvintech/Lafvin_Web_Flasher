@@ -6,7 +6,7 @@
       "chipFamily": "ESP32-S3",
       "parts": [
         {
-          "path": "xiaozhi_v2.2.4_merged.bin",
+          "path": "xiaozhi_v2.2.4.bin",
           "offset": 0
         }
       ]
