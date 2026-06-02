@@ -137,6 +137,24 @@
       ]
     },
     {
+      "id": "LA076",
+      "name": "LAFVIN Desktop AI Gimbal Robot",
+      "image": "firmware/LA076/LA076.png",
+      "firmwares": [
+        {
+          "id": "xiaozhi_gimbal",
+          "name": "xiaozhi_gimbal",
+          "versions": [
+            {
+              "id": "2.2.6",
+              "name": "2.2.6",
+              "manifest_path": "firmware/LA076/LAFVIN_Desktop_AI_Gimbal_Robot/1.0.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "_comment": "=============== LB系列 ===============",
       "hidden": true
     },   
