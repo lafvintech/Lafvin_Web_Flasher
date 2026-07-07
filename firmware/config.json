@@ -274,6 +274,17 @@
       "image": "firmware/LB013/LB013.png",
       "firmwares": [
         {
+          "id": "Factory Firmware",
+          "name": "Factory Firmware",
+          "versions": [
+            {
+              "id": "Factory Firmware",
+              "name": "Factory Firmware",
+              "manifest_path": "firmware/LB013/FactoryFirmware/1.0.json"
+            }
+          ]
+        },
+        {
           "id": "Arduino",
           "name": "Arduino",
           "versions": [
@@ -285,13 +296,13 @@
           ]
         },
         {
-          "id": "Claw",
-          "name": "Claw",
+          "id": "MimiClaw",
+          "name": "MimiClaw",
           "versions": [
             {
               "id": "V1.0.1",
               "name": "V1.0.1",
-              "manifest_path": "firmware/LB013/Claw/1.0.json"
+              "manifest_path": "firmware/LB013/MimiClaw/1.0.json"
             }
           ]
         }
