@@ -305,6 +305,17 @@
               "manifest_path": "firmware/LB013/MimiClaw/1.0.json"
             }
           ]
+        },
+        {
+          "id": "ESP-Claw",
+          "name": "ESP-Claw",
+          "versions": [
+            {
+              "id": "V1.0.1",
+              "name": "V1.0.1",
+              "manifest_path": "firmware/LB013/ESP-Claw/1.0.json"
+            }
+          ]
         }
       ]
     }
