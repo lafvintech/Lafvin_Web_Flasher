@@ -51,9 +51,14 @@
           "name": "ChatGPT",
           "versions": [
             {
-              "id": "1.0.0",
-              "name": "1.0.0",
-              "manifest_path": "firmware/LA064/ChatGPT/1.0.0/1.0.0.json"
+              "id": "1.2.0",
+              "name": "1.2.0",
+              "manifest_path": "firmware/LA064/ChatGPT/1.2.0/1.2.0.json"
+            },
+            {
+              "id": "1.3.0",
+              "name": "1.3.0",
+              "manifest_path": "firmware/LA064/ChatGPT/1.3.0/1.3.0.json"
             }
           ]
         }
